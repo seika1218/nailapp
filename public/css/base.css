@@ -1,0 +1,649 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea {
+	font-size: 100%;
+	vertical-align: middle;
+}
+
+img {
+	border-style: none;
+}
+
+hr {
+	display: none;
+}
+
+em {
+	font-style: normal
+}
+
+input {
+	line-height: auto;
+	vertical-align: middle;
+}
+
+strong.more {
+	color: #c30
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+body {
+	background-color: #f0f0f0;
+}
+
+main {
+	max-width: 768px;
+}
+
+.topimage {
+	max-width: 100%;
+	filter: brightness(70%);
+}
+
+.header {
+	height: 100px;
+	max-width: 768px;
+	background-color: white;
+	text-align: center;
+}
+
+.header-flex {
+	display: flex;
+}
+
+.header-logo {
+	height: 65%;
+	max-width: 20%;
+
+}
+
+.header-p {
+	text-align: center;
+	font-size: large;
+	font-family: 'Sacramento', cursive;
+}
+
+.hamburger-menu {
+	max-width: 768px;
+	position: relative;
+}
+
+.menu-btn {
+	position: absolute;
+	top: -80px;
+	right: 10px;
+	display: flex;
+	height: 60px;
+	width: 60px;
+	justify-content: center;
+	align-items: center;
+	z-index: 90;
+	background-color: #E7796A;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 25px;
+	border-radius: 3px;
+	background-color: #EDEEEE;
+	position: absolute;
+}
+
+.menu-btn span:before {
+	bottom: 8px;
+}
+
+.menu-btn span:after {
+	top: 8px;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+	background-color: rgba(255, 255, 255, 0);
+	/*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+	bottom: 0;
+	transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+	display: none;
+}
+
+.menu-content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 80;
+	background-color: #E7796A;
+}
+
+.menu-content ul {
+	padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+	border-bottom: solid 1px #EDEEEE;
+	list-style: none;
+}
+
+.menu-content ul li a {
+	display: block;
+	width: 100%;
+	font-size: 15px;
+	box-sizing: border-box;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 9px 15px 10px 0;
+	position: relative;
+}
+
+.menu-content ul li a::before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	border-top: solid 2px #EDEEEE;
+	border-right: solid 2px #EDEEEE;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 11px;
+	top: 20px;
+}
+
+.menu-content {
+	width: 30%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 100%;
+	/*leftの値を変更してメニューを画面外へ*/
+	z-index: 80;
+	background-color: #E7796A;
+	transition: all 0.5s;
+	/*アニメーション設定*/
+}
+
+#menu-btn-check:checked~.menu-content {
+	left: 70%;
+	/*メニューを画面内へ*/
+}
+
+.search_container {
+	position: absolute;
+	top: -100px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+	border: 1px solid #999;
+	padding: 3px 10px;
+	border-radius: 20px;
+	height: 2.3em;
+	width: 260px;
+	overflow: hidden;
+}
+
+.search_container input[type="text"] {
+	border: none;
+	height: 2.0em;
+}
+
+.search_container input[type="text"]:focus {
+	outline: 0;
+}
+
+.search_container input[type="submit"] {
+	cursor: pointer;
+	font-family: FontAwesome;
+	font-size: 1.3em;
+	border: none;
+	background: none;
+	color: #3879D9;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	right: 0;
+	top: -10px;
+	outline: none;
+}
+
+.example {
+	margin-top: 20px;
+	text-align: center;
+	border: 1px solid #999;
+	padding: 10px;
+	max-width: 768px;
+}
+
+.example img {
+	width: 150px;
+	height: 150px;
+}
+
+.stuff {
+	padding-top: 30px;
+	width: 50vw;
+	margin: 0 auto;
+}
+
+.textBox {
+	position: relative;
+	width: 100%;
+	padding-top: 10px;
+	height: 45px;
+	display: inline-flex;
+	margin-bottom: 3vh;
+}
+
+.textBox .text {
+	font-weight: 500;
+	width: calc(100% - 2vw);
+	height: 27px;
+	padding-left: 0.5vw;
+	background-color: transparent;
+	color: #2B2B2B;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 0px;
+	outline: none;
+	border-style: solid;
+	border-color: #E3E7EA;
+	border-width: 0px 0px 2px 0px;
+	font-size: 20px;
+	-webkit-transition: border-color 0.45s linear;
+	transition: border-color 0.45s linear;
+}
+
+.textBox>input.text:focus {
+	border-color: #B2FF59;
+}
+
+.textBox .label {
+	opacity: 0.1;
+	pointer-events: none;
+	z-index: 1;
+	color: #C0C0C0;
+	position: absolute;
+	padding-left: 0.5vw;
+	bottom: 3px;
+	font-size: 20px;
+	font-weight: 300;
+	-webkit-transition-property: opacity bottom font-size;
+	transition-property: opacity bottom font-size;
+	-webkit-transition-duration: 0.45s;
+	transition-duration: 0.45s;
+	-webkit-transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+	transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+.textBox .error {
+	position: absolute;
+	margin-top: 48px;
+	width: 100%;
+	color: #e74c3c;
+	text-align: center;
+}
+
+.textBox>input.text:focus~.label,
+.textBox>input.text:not([value=""])~.label {
+	opacity: 1;
+	z-index: 1;
+	bottom: 55%;
+	font-size: 12px;
+}
+
+.textBox>input.text:focus~.label {
+	color: #B2FF59;
+}
+
+.textBox ::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #2B2B2B;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'Roboto', sans-serif;
+}
+
+.textBox ::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #2B2B2B;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'Roboto', sans-serif;
+}
+
+.textBox :-ms-input-placeholder {
+	/* IE 10+ */
+	color: #2B2B2B;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'Roboto', sans-serif;
+}
+
+.textBox :-moz-placeholder {
+	/* Firefox 18- */
+	color: #2B2B2B;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: 'Roboto', sans-serif;
+}
+
+.login-button {
+	width: 50vw;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.forget-password {
+	text-align: center;
+	font-size: small;
+	margin-bottom: 10px;
+}
+
+.btn-info {
+	margin-top: -25px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.button-3 {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	background: linear-gradient(#DCEFFD, #DCEFFD);
+	border: 1px solid #DCEFFD;
+	border-radius: 50%;
+	color: gray;
+	text-decoration: none;
+	text-align: center;
+	font-size: small;
+}
+
+.button-3:hover {
+	animation: scale .3s ease-in-out;
+}
+
+@keyframes scale {
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+.nailist-button {
+	width: 50vw;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25%;
+
+}
+
+.nailistmargin {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.nailistedit-p {
+	margin-bottom: 10px;
+}
+
+.flex {
+	display: flex;
+}
+
+.signup {
+	font-family: sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	border-bottom: 6px double #000;
+	width: 50%;
+}
+
+.logoutbtn {
+	font-size: large;
+	margin-top: 50px;
+	border: none;
+	background-color: #E7796A;
+	color: white;
+	margin-left: 10%;
+	border-bottom: 1px solid white;
+
+}
+
+#example {
+	display: block;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#img_path{
+	display: block;
+	margin: 0px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#preview img {
+	display: block;
+	margin: 0px auto;
+	width: 300px;
+	border: solid 1px silver;
+}
+
+.explan{
+	display: block;
+	margin: 0px auto;
+}
+
+.nailmesse{
+	padding: 0.5em 1em;
+    margin: 2em 6em;
+    font-weight: bold;
+    color: #e74c3c;/*文字色*/
+    background: #FFF;
+    border: solid 1px #e74c3c;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.liked {
+	color: pink;
+  }
+
+  .links{
+	margin-left: 35%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	font-size: 1.5em;
+  }
+
+  .heart{
+	width: 30px;
+margin-left: -45px;
+margin-bottom: 10px;
+  }
+
+.naildash1{
+	width: 9em;
+	height: 9em;
+}
+
+.naildash{
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 8.5em;
+	height: 8.5em;
+}
+
+.deleteform{
+	text-align: center;
+}
+
+.result{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-size: 20px;
+	width: 50%;
+	color: #505050;/*文字色*/
+	padding: 0.5em;/*文字周りの余白*/
+	display: inline-block;/*おまじない*/
+	line-height: 1.3;/*行高*/
+	background: #dbebf8;/*背景色*/
+	vertical-align: middle;
+	border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+}
+
+.result:before{
+	content: '●';
+	color: white;
+	margin-right: 8px;
+}
+
+i{
+	font-size: large;
+	margin-left: -30px;
+	padding-bottom: 50px;
+}
+
+.detail{
+	width: 70%;
+	padding: 1em 1.5em;
+    border: solid 2px gray;/*線*/
+	margin: 0 auto;
+	margin-bottom: 15%;
+}
+
+.detail p{
+	margin: 0; 
+    padding: 0;
+	text-align: center;
+}
+
+.imgdetail{
+	/* margin: 0 auto; */
+	width: 20em;
+	/* margin-left: 20%; */
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.imgtume{
+	text-align: center;
+}
+.label{
+margin-top: 20px;
+}
+
+.goodlabel{
+	margin: 0 auto;
+	position: relative;
+text-align: center;
+	padding: 0 14px;
+	width: 30%;
+	font-size: 20px;
+	font-family:'Courier New', Courier;
+	
+}
+
+.goodlabel::before,
+.goodlabel::after{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 3px; /*斜め線の太さ*/
+	height: 100%; /*斜め線の長さ*/
+	background: #9abfe9; /*斜め線の色*/
+	
+}
+
+.goodlabel::before{
+	top: 0;
+	left: 0; /*斜め線(左)を左に寄せる*/
+  
+  /*斜め線(左)の角度*/
+	-webkit-transform: rotate(-15deg);
+			transform: rotate(-15deg);
+}
+
+.goodlabel::after{
+	top: 0;
+	right: 0; /*斜め線(右)を右に寄せる*/
+  /*斜め線(右)の角度*/
+	-webkit-transform: rotate(15deg);
+			transform: rotate(15deg);
+}
+
+.fa-solid{
+	position: relative;
+	top:-15px;
+
+}
+
+.mar{
+	
+	text-align: center;
+}

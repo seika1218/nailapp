@@ -1,0 +1,65 @@
+<?php
+
+namespace App\Http\Controllers\Nailist\Auth;
+
+use App\Http\Controllers\Controller;
+use App\Models\Nailist;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+
+class RegisteredUserController extends Controller
+{
+    /**
+     * Display the registration view.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('nailist.auth.register');
+    }
+
+    /**
+     * Handle an incoming registration request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function store(Request $request)
+    {
+        $test_alert = "<script type='text/javascript'>alert('alart');</script>";
+        echo $test_alert;
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:nailists'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+
+        ]);
+
+
+        $user = Nailist::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        event(new Registered($user));
+
+        //Auth::login($user);
+        Auth::guard('nailist')->login($user);
+
+        return redirect(RouteServiceProvider::NAILIST_HOME);
+    }
+
+    protected function loggedOut(\Illuminate\Http\Request $request)
+    {
+        return redirect('top');
+    }
+}
