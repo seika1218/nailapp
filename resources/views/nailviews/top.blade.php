@@ -23,13 +23,10 @@
 
         <img class="topimage" src="img/topimage.jpg">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<form action="#" class="search_container">
-  <input type="text" size="25" placeholder="キーワード検索">
-  <input type="submit" value="&#xf002">
-</form>
+<div class="topdiv">会員登録するとお気に入りのデザインをいいねして<br>いつでも見返すことができます。</div>
    
     <div class="mar">
+        <div class="topp">投稿一覧</div>
     @foreach($nails as $key => $value)
 
 <img class="naildash" src="{{ asset($value->img_path) }}">

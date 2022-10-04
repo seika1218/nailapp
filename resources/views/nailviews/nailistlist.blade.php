@@ -17,16 +17,16 @@ session_start();  ?>
 </header>
 
 <body>
-  <main>
+  <main class="listmain">
     @foreach($nails as $key => $value)
     <img class="naildash" src="{{ asset($value->img_path) }}">
     <form action="/nailedit/{{$value->id}}" method="POST">
       @csrf
-      <button type="submit" class="">編集</button>
+      <button type="submit" class="btn">編集</button>
     </form>
     <form action="/naildestroy/{{$value->id}}" method="POST">
       @csrf
-      <button type="submit" class="">削除</button>
+      <button type="submit" class="btn">削除</button>
     </form>
     @endforeach
 

@@ -18,6 +18,7 @@
     </header>
 <body>
 <main>
+
     <div class="label">
     <div class="goodlabel">いいね一覧</div>
     </div>

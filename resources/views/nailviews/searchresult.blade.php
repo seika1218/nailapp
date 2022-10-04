@@ -30,7 +30,7 @@
 
 <span class="likes">
 
-    <i class="fa-solid fa-heart like-toggle liked" data-nail-id="{{ $value->id }}"></i>
+    <i class="fa-solid fa-heart like-toggle relike" data-nail-id="{{ $value->id }}"></i>
     <span class="like-counter">{{$value->likes_count}}</span>
 </span><!-- /.likes -->
 @else

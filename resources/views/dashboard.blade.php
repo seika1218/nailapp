@@ -30,7 +30,7 @@
             <input type="submit" value="&#xf002">
         </form>
 
-
+ 
         <br>
         <div class="btn-info">
             <a href="{{ url('/good') }}" class="button-3">いいね一覧</a>

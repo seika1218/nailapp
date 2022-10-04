@@ -482,7 +482,7 @@ main {
 	margin-bottom: 20px;
 }
 
-#img_path{
+#img_path {
 	display: block;
 	margin: 0px auto;
 	margin-top: 20px;
@@ -496,154 +496,259 @@ main {
 	border: solid 1px silver;
 }
 
-.explan{
+.explan {
 	display: block;
 	margin: 0px auto;
 }
 
-.nailmesse{
+.nailmesse {
 	padding: 0.5em 1em;
-    margin: 2em 6em;
-    font-weight: bold;
-    color: #e74c3c;/*文字色*/
-    background: #FFF;
-    border: solid 1px #e74c3c;/*線*/
-    border-radius: 10px;/*角の丸み*/
+	margin: 2em 6em;
+	font-weight: bold;
+	color: #e74c3c;
+	/*文字色*/
+	background: #FFF;
+	border: solid 1px #e74c3c;
+	/*線*/
+	border-radius: 10px;
+	/*角の丸み*/
 }
 
 .liked {
 	color: pink;
-  }
+}
 
-  .links{
+.links {
 	margin-left: 35%;
 	margin-top: 10%;
 	margin-bottom: 10%;
 	font-size: 1.5em;
-  }
+}
 
-  .heart{
+.heart {
 	width: 30px;
-margin-left: -45px;
-margin-bottom: 10px;
-  }
+	margin-left: -45px;
+	margin-bottom: 10px;
+}
 
-.naildash1{
+.naildash1 {
 	width: 9em;
 	height: 9em;
 }
 
-.naildash{
+.naildash {
 	margin-left: 5px;
 	margin-right: 5px;
 	width: 8.5em;
 	height: 8.5em;
 }
 
-.deleteform{
+.deleteform {
 	text-align: center;
 }
 
-.result{
+.result {
 	margin-bottom: 20px;
 	margin-top: 20px;
 	font-size: 20px;
 	width: 50%;
-	color: #505050;/*文字色*/
-	padding: 0.5em;/*文字周りの余白*/
-	display: inline-block;/*おまじない*/
-	line-height: 1.3;/*行高*/
-	background: #dbebf8;/*背景色*/
+	color: #505050;
+	/*文字色*/
+	padding: 0.5em;
+	/*文字周りの余白*/
+	display: inline-block;
+	/*おまじない*/
+	line-height: 1.3;
+	/*行高*/
+	background: #dbebf8;
+	/*背景色*/
 	vertical-align: middle;
-	border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+	border-radius: 25px 0px 0px 25px;
+	/*左側の角を丸く*/
 }
 
-.result:before{
+.result:before {
 	content: '●';
 	color: white;
 	margin-right: 8px;
 }
 
-i{
+i {
 	font-size: large;
 	margin-left: -30px;
 	padding-bottom: 50px;
 }
 
-.detail{
+.detail {
 	width: 70%;
 	padding: 1em 1.5em;
-    border: solid 2px gray;/*線*/
+	border: solid 2px gray;
+	/*線*/
 	margin: 0 auto;
 	margin-bottom: 15%;
 }
 
-.detail p{
-	margin: 0; 
-    padding: 0;
+.detail p {
+	margin: 0;
+	padding: 0;
 	text-align: center;
 }
 
-.imgdetail{
+.imgdetail {
 	/* margin: 0 auto; */
 	width: 20em;
 	/* margin-left: 20%; */
 	margin-top: 10%;
 	margin-bottom: 10%;
 }
-.imgtume{
+
+.imgtume {
 	text-align: center;
 }
-.label{
-margin-top: 20px;
+
+.label {
+	margin-top: 20px;
 }
 
-.goodlabel{
+.goodlabel {
 	margin: 0 auto;
 	position: relative;
-text-align: center;
+	text-align: center;
 	padding: 0 14px;
 	width: 30%;
 	font-size: 20px;
-	font-family:'Courier New', Courier;
-	
+	font-family: 'Courier New', Courier;
+
 }
 
 .goodlabel::before,
-.goodlabel::after{
+.goodlabel::after {
 	position: absolute;
 	content: "";
 	display: block;
-	width: 3px; /*斜め線の太さ*/
-	height: 100%; /*斜め線の長さ*/
-	background: #9abfe9; /*斜め線の色*/
-	
+	width: 3px;
+	/*斜め線の太さ*/
+	height: 100%;
+	/*斜め線の長さ*/
+	background: #9abfe9;
+	/*斜め線の色*/
+
 }
 
-.goodlabel::before{
+.goodlabel::before {
 	top: 0;
-	left: 0; /*斜め線(左)を左に寄せる*/
-  
-  /*斜め線(左)の角度*/
+	left: 0;
+	/*斜め線(左)を左に寄せる*/
+
+	/*斜め線(左)の角度*/
 	-webkit-transform: rotate(-15deg);
-			transform: rotate(-15deg);
+	transform: rotate(-15deg);
 }
 
-.goodlabel::after{
+.goodlabel::after {
 	top: 0;
-	right: 0; /*斜め線(右)を右に寄せる*/
-  /*斜め線(右)の角度*/
+	right: 0;
+	/*斜め線(右)を右に寄せる*/
+	/*斜め線(右)の角度*/
 	-webkit-transform: rotate(15deg);
-			transform: rotate(15deg);
+	transform: rotate(15deg);
 }
 
-.fa-solid{
+.fa-solid {
 	position: relative;
-	top:-15px;
+	top: -15px;
 
 }
 
-.mar{
-	
+.mar {
 	text-align: center;
+}
+
+.listmain {
+	text-align: center;
+}
+
+.btn {
+	margin-left: 47%;
+	margin-bottom: 10px;
+}
+
+.editmain {
+	margin-left: 20%;
+}
+
+.btnedit {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.textedit {
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.imgedit {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.topdiv {
+	left: 10px;
+	position: relative;
+	color: #DCEFFD;
+	top: -100px;
+	font-family: YakuHanJP, Roboto, "Kinto Sans", "Helvetica Neue", "Segoe UI", Helvetica, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "メイリオ", Meiryo, sans-serif;
+}
+
+.topp {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	padding: 0 14px;
+	width: 30%;
+	font-size: 20px;
+	font-family: 'Courier New', Courier;
+	margin-bottom: 20px;
+
+}
+
+.topp::before,
+.topp::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 3px;
+	/*斜め線の太さ*/
+	height: 100%;
+	/*斜め線の長さ*/
+	background: #9abfe9;
+	/*斜め線の色*/
+
+}
+
+.topp::before {
+	top: 0;
+	left: 0;
+	/*斜め線(左)を左に寄せる*/
+
+	/*斜め線(左)の角度*/
+	-webkit-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.topp::after {
+	top: 0;
+	right: 0;
+	/*斜め線(右)を右に寄せる*/
+	/*斜め線(右)の角度*/
+	-webkit-transform: rotate(15deg);
+	transform: rotate(15deg);
+}
+
+.relike{
+	top:40px;
 }

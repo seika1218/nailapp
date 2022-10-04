@@ -15,14 +15,14 @@
 </header>
 
 <body>
-    <main>
+    <main class="">
         <form method="post" action="/naileditcomplete/{{$nailedit->id}}" name="form">
             @csrf
-            <img class="naildash" src="{{ asset($nailedit->img_path) }}">
+            <img class="naildash imgedit" src="{{ asset($nailedit->img_path) }}">
             <br>
-            <textarea rows="10" cols="60" name="explanation" class="con-btn-large">{{ $nailedit->explanation }}</textarea>
+            <textarea rows="10" cols="60" name="explanation" class="con-btn-large textedit">{{ $nailedit->explanation }}</textarea>
             <br>
-            <input type="submit" class="con-enter" name="button" value="更新">
+            <input type="submit" class="con-enter btnedit" name="button" value="更新">
         </form>
 
         <div class="forget-password"><a href="{{ url()->previous() }}">戻る</a></div>
