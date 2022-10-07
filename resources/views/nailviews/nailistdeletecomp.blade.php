@@ -17,7 +17,7 @@
 <main>
 
 <div class="nailmesse">退会しました。</div>
-<div class="forget-password"><a href="{{ url('/top') }}">トップへ</a></div>
+<div class="forget-password"><a href="{{ url('/') }}">トップへ</a></div>
     </main>
     <footer>
         @include('nailviews/inc.footer')

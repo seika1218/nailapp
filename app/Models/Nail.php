@@ -26,10 +26,10 @@ class Nail extends Model
 
       public function likes()
       {
-          return $this->hasMany('App\Model\Like');
+          return $this->hasMany('App\Models\Like');
       }
       //後でViewで使う、いいねされているかを判定するメソッド。
-      public function isLikedBy($user): bool {
-          return Like::where('user_id', $user->id)->where('nail_id', $this->id)->first() !==null;
+      public function isLikedBy($user,$nail_id): bool {
+          return Like::where('user_id', $user->id)->where('nail_id', $nail_id)->first() !==null;
       }
 }

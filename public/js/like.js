@@ -22,12 +22,12 @@ $(function () {
         console.log('ok');
         $this.toggleClass('liked'); //likedクラスのON/OFF切り替え。
         $this.next('.like-counter').html(data.nail_likes_count);
+        console.log('fail');
       })
       //通信失敗した時の処理
       .fail(function () {
         // console.log($param);
-      
-        console.log('fail');
+         
       });
   });
 });

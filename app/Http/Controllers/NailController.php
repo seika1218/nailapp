@@ -29,11 +29,11 @@ class NailController extends Controller
     public function nails(Nail $nail)
     {
         // $nails = Nail::pluck('img_path');
-        $nails = Nail::All();
+        $nails = Nail::withCount('likes')->get();
 
         $likes= new Nail;
         $user = Auth::user();
-        $naillike = $nail->isLikedBy($user);
+        // $naillike = $nail->isLikedBy($user);
 
         return view('dashboard', compact('nails','nail'));
     }
@@ -277,7 +277,7 @@ public function userupdate(Request $request, $id)
 
     public function result(Request $request, Nail $nail)
     {
-        $articles = Nail::orderBy('created_at', 'asc')->where(function ($query) {
+        $articles = Nail::orderBy('created_at', 'asc')->withCount('likes')->where(function ($query) {
 
             // 検索機能
             if ($search = request('search')) {
@@ -291,7 +291,7 @@ public function userupdate(Request $request, $id)
 
         $likes= new Nail;
         $user = Auth::user();
-        $naillike = $nail->isLikedBy($user);
+        // $naillike = $nail->isLikedBy($user);
 
 
         return view('nailviews/searchresult', compact('articles','nail'));

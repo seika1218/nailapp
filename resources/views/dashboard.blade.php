@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>naildesignbook</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/base.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c19f37287d.js" crossorigin="anonymous"></script>
     <script src="{{ asset('/js/like.js') }}"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
 </head>
 
 <body>
@@ -30,42 +33,42 @@
             <input type="submit" value="&#xf002">
         </form>
 
- 
+
         <br>
         <div class="btn-info">
             <a href="{{ url('/good') }}" class="button-3">いいね一覧</a>
-            
+
             <a href="{{ url('/mypage') }}" class="button-3">マイページ</a>
         </div>
-  
-
-<div class="mar">
-    @foreach($nails as $key => $value)
-
-    <a href="{{ route('naildetail',$value->id) }}"><img class="naildash" src="{{ asset($value->img_path) }}"></a>
 
 
-   <!-- 参考：$itemにはNailControllerから渡した投稿のレコード$itemsをforeachで展開してます -->
-  
-    <!-- Nail.phpに作ったisLikedByメソッドをここで使用 -->
-    @if (!$nail->isLikedBy(Auth::user()))
+        <div class="mar">
+            @foreach($nails as $key => $value)
 
-    <span class="likes">
+            <a href="{{ route('naildetail',$value->id) }}"><img class="naildash" src="{{ asset($value->img_path) }}"></a>
 
-        <i class="fa-solid fa-heart like-toggle" data-nail-id="{{ $value->id }}"></i>
-        <span class="like-counter">{{$value->likes_count}}</span>
-    </span><!-- /.likes -->
-    @else
-    <span class="likes">
-        <i class="fa-solid fa-heart like-toggle liked" data-nail-id="{{ $value->id }}"></i>
-        <span class="like-counter">{{$value->likes_count}}</span>
-    </span><!-- /.likes -->
-    @endif
+
+            <!-- 参考：$itemにはNailControllerから渡した投稿のレコード$itemsをforeachで展開してます -->
+
+            <!-- Nail.phpに作ったisLikedByメソッドをここで使用 -->
+            @if (!$nail->isLikedBy(Auth::user(),$value->id))
 
 
 
-    @endforeach
-    </div>
+            <i class="fa-solid fa-heart like-toggle" data-nail-id="{{ $value->id }}"></i>
+            <span class="like-counter number">{{$value->likes_count}}</span>
+            <!-- /.likes -->
+            @else
+
+            <i class="fa-solid fa-heart like-toggle liked" data-nail-id="{{ $value->id }}"></i>
+            <span class="like-counter number">{{$value->likes_count}}</span>
+            <!-- /.likes -->
+            @endif
+
+
+
+            @endforeach
+        </div>
     </main>
     <footer>
         @include('nailviews/inc.footer')

@@ -19,15 +19,18 @@ session_start();  ?>
 <body>
   <main class="listmain">
     @foreach($nails as $key => $value)
-    <img class="naildash" src="{{ asset($value->img_path) }}">
-    <form action="/nailedit/{{$value->id}}" method="POST">
+    <div class="listflex">
+    <img class="naildash listimg" src="{{ asset($value->img_path) }}">
+    <div class="listex">{{ $value->explanation }}</div>
+    <form action="/nailedit/{{$value->id}}" method="POST" class="form">
       @csrf
-      <button type="submit" class="btn">編集</button>
+      <button type="submit" class="btn btnlist">編集</button>
     </form>
-    <form action="/naildestroy/{{$value->id}}" method="POST">
+    <form action="/naildestroy/{{$value->id}}" method="POST" class="form">
       @csrf
-      <button type="submit" class="btn">削除</button>
+      <button type="submit" class="btn btnlist">削除</button>
     </form>
+    </div>
     @endforeach
 
 

@@ -466,7 +466,7 @@ main {
 
 .logoutbtn {
 	font-size: large;
-	margin-top: 50px;
+	margin-top: 80px;
 	border: none;
 	background-color: #E7796A;
 	color: white;
@@ -532,15 +532,15 @@ main {
 }
 
 .naildash1 {
-	width: 9em;
-	height: 9em;
+	margin-top: 30px;
+	width: 20em;
+	height: 20em;
 }
 
 .naildash {
-	margin-left: 5px;
-	margin-right: 5px;
 	width: 8.5em;
 	height: 8.5em;
+	margin-bottom: -30px;
 }
 
 .deleteform {
@@ -563,18 +563,18 @@ main {
 	background: #dbebf8;
 	/*背景色*/
 	vertical-align: middle;
-	border-radius: 25px 0px 0px 25px;
+	border-radius: 25px 25px 25px 25px;
 	/*左側の角を丸く*/
 }
 
 .result:before {
-	content: '●';
+
 	color: white;
 	margin-right: 8px;
 }
 
 i {
-	font-size: large;
+	font-size: 25px;
 	margin-left: -30px;
 	padding-bottom: 50px;
 }
@@ -656,16 +656,17 @@ i {
 
 .fa-solid {
 	position: relative;
-	top: -15px;
-
+	left: -5px;
 }
 
 .mar {
 	text-align: center;
+	margin-left: 3%;
 }
 
 .listmain {
-	text-align: center;
+	max-width: 300px;
+	margin: 0 auto;
 }
 
 .btn {
@@ -701,7 +702,7 @@ i {
 	position: relative;
 	color: #DCEFFD;
 	top: -100px;
-	font-family: YakuHanJP, Roboto, "Kinto Sans", "Helvetica Neue", "Segoe UI", Helvetica, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "メイリオ", Meiryo, sans-serif;
+	font-family: 'Zen Kurenaido', sans-serif;
 }
 
 .topp {
@@ -749,6 +750,105 @@ i {
 	transform: rotate(15deg);
 }
 
-.relike{
-	top:40px;
+.relike {
+	top: 40px;
+}
+
+.number {
+	position: relative;
+	left: -27px;
+	top: 20px;
+
+}
+
+.resultheart {
+	position: relative;
+
+	top: 40px;
+}
+
+.numberresult {
+	position: relative;
+	left: -26px;
+	top: 60px;
+	font-size: large;
+}
+
+.resultmain {
+	width: 100%;
+	text-align: center;
+}
+
+.goodimg {
+	position: relative;
+	margin-bottom: 1px;
+}
+
+.topimg {
+	margin-bottom: 1px;
+}
+
+.listflex {
+	display: flex;
+	margin: 0 auto;
+}
+
+.listimg {
+	margin-bottom: 10px;
+}
+
+.listex {
+	text-align: center;
+	width: 100px;
+	height: 136px;
+	border: double 5px #cde4ff;/*背景色*/
+	margin-left: 10px;
+	font-size: 10px;
+}
+
+.btnlist {
+	width: 70px;
+	height: 30px;
+	margin-top: 50px;
+	writing-mode: horizontal-tb;
+
+	border: 1px solid #ccc;
+	background: #f1e767;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+	-webkit-box-shadow: inset 1px 1px 1px #fff;
+	box-shadow: inset 1px 1px 1px #fff;
+}
+
+#per {
+	font-size: 13px;
+	display: inline-block;
+	background: #ffffff;
+	color: #9abfe9;
+	width: 80px;
+	height: 80px;
+	border: double 4px #9abfe9;
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	margin-left: 43%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.btnlist:hover{
+	background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
+
+.form button{
+	width: 50px;
+	margin-left: 3pxs;
+}
+
+.back{
+	margin-left: 10px;
 }

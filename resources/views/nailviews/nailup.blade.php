@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>naildesignbook</title>
   <link rel="stylesheet" type="text/css" href="{{ asset('css/base.css') }}" />
-
+  <script src="{{ asset('/js/nail.js') }}"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -32,7 +32,7 @@
       <textarea rows="10" cols="60" name="explan" class="explan" value="" required></textarea>
 
       <div>
-        <input type="text" id="example" name="nailist_id" value="<?php
+        <input type="hidden" id="example" name="nailist_id" value="<?php
 
                                                                   use Illuminate\Support\Facades\Auth;
 
@@ -41,7 +41,7 @@
       </div>
 
       <div>
-        <input type="submit" id="example" value="投稿する">
+        <input type="submit" id="per" value="投稿する">
       </div>
     </form>
 
@@ -50,7 +50,7 @@
     @include('nailviews/inc.footer')
   </footer>
   <div id="preview"></div>
-  <script src="js/nail.js"></script>
+  <script src="{{ asset('/js/nail.js') }}"></script>
 </body>
 
 </html>

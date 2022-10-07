@@ -19,25 +19,25 @@
         @include('nailviews/inc.headerlogout')
     </header>
 <body>
-<main>
+<main class="resultmain">
     <div class="result">検索結果</div>
 <br>
 
 @foreach($articles as $key => $value)
-    <a href="{{ url('/nailedit') }}"><img class="naildash" src="{{ asset($value->img_path) }}"></a>
+    <a href="{{ route('naildetail',$value->id) }}"><img class="naildash" src="{{ asset($value->img_path) }}"></a>
 
-    @if (!$nail->isLikedBy(Auth::user()))
+    @if (!$nail->isLikedBy(Auth::user(),$value->id))
 
-<span class="likes">
 
-    <i class="fa-solid fa-heart like-toggle relike" data-nail-id="{{ $value->id }}"></i>
-    <span class="like-counter">{{$value->likes_count}}</span>
-</span><!-- /.likes -->
+
+    <i class="fa-solid fa-heart like-toggle resultheart" data-nail-id="{{ $value->id }}"></i>
+    <span class="like-counter numberresult">{{$value->likes_count}}</span>
+<!-- /.likes -->
 @else
-<span class="likes">
-    <i class="fa-solid fa-heart like-toggle" data-nail-id="{{ $value->id }}"></i>
-    <span class="like-counter">{{$value->likes_count}}</span>
-</span><!-- /.likes -->
+
+    <i class="fa-solid fa-heart like-toggle relike liked resultheart" data-nail-id="{{ $value->id }}"></i>
+    <span class="like-counter numberresult">{{$value->likes_count}}</span>
+<!-- /.likes -->
 @endif
 
 

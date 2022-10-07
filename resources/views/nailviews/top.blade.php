@@ -23,19 +23,21 @@
 
         <img class="topimage" src="img/topimage.jpg">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="topdiv">会員登録するとお気に入りのデザインをいいねして<br>いつでも見返すことができます。</div>
-   
-    <div class="mar">
-        <div class="topp">投稿一覧</div>
-    @foreach($nails as $key => $value)
+        <div class="topdiv">会員登録するとお気に入りのデザインをいいねして<br>いつでも見返すことができます。</div>
 
-<img class="naildash" src="{{ asset($value->img_path) }}">
+        <div class="mar">
+            <div class="topp">投稿一覧</div>
+            @if(isset($nails))
+            @foreach($nails as $key => $value)
 
-@endforeach
-</div>
-</main>
+            <img class="naildash topimg" src="{{ asset($value->img_path) }}">
+
+            @endforeach
+            @endif
+        </div>
+    </main>
     <footer>
-    @include('nailviews/inc.footer')
+        @include('nailviews/inc.footer')
     </footer>
 </body>
 

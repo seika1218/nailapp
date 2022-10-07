@@ -17,7 +17,7 @@
         @include('nailviews/inc.header')
     </header>
 <body>
-<main>
+<main class="resultmain">
 
     <div class="label">
     <div class="goodlabel">いいね一覧</div>
@@ -25,7 +25,8 @@
     <br>
     @foreach($nail as $key => $value)
 
-    <a href="{{ route('naildetail',$value->id) }}"><img class="naildash" src="{{ asset($value->img_path) }}"></a>
+    <a href="{{ route('naildetail',$value->id) }}"><img class="naildash goodimg" src="{{ asset($value->img_path) }}"></a>
+   
     @endforeach
     <div class="forget-password"><a href="{{ url('/dashboard') }}">戻る</a></div>
 
