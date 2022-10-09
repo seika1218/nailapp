@@ -10,7 +10,7 @@
 
 一般会員↓
  
- メールアドレス：flower.gmail.com
+ メールアドレス：flower@gmail.com
  
  パスワード：12345678
 
